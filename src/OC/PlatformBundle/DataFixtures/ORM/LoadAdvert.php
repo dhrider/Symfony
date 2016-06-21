@@ -14,7 +14,7 @@ class LoadAdvert implements FixtureInterface
         $adverts = array(
             array(
                 "title" => "Cherche Web Designer",
-                "author" => "OpenClassrooms",
+                "author" => "Web Desing Inc",
                 "content" => "On a besoin d'un désigner Web",
                 "nb_applications" => 0,
                 "updated_at" => date_add(new \DateTime(),new \DateInterval('P15D'))
@@ -27,11 +27,25 @@ class LoadAdvert implements FixtureInterface
                 "updated_at" => date_add(new \DateTime(),new \DateInterval('P5D'))
             ),
             array(
+                "title" => "Cherche Intégrateur",
+                "author" => "OpenClassrooms",
+                "content" => "On a besoin d'un Intégrateur",
+                "nb_applications" => 1,
+                "updated_at" => date_add(new \DateTime(),new \DateInterval('P11D'))
+            ),
+            array(
                 "title" => "Cherche développeur Php",
                 "author" => "OpenClassrooms",
                 "content" => "On a besoin d'un développeur Php",
                 "nb_applications" => 1,
-                "updated_at" => date_add(new \DateTime(),new \DateInterval('P11D'))
+                "updated_at" => date_add(new \DateTime(),new \DateInterval('P12D'))
+            ),
+            array(
+                "title" => "Cherche développeur/analyste",
+                "author" => "OpenClassrooms",
+                "content" => "On a besoin d'un développeur/analyste",
+                "nb_applications" => 1,
+                "updated_at" => date_add(new \DateTime(),new \DateInterval('P1D'))
             )
         );
 
