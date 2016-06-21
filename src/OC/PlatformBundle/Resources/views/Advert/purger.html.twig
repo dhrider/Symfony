@@ -1,0 +1,18 @@
+{# src/OC/PlatformBundle/Resources/views/Advert/edit.html.twig #}
+
+{% extends "OCPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+    Purger les annonces - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+    {% if purgeAdverts is not empty %}
+        {% for purgeAdvert in purgeAdverts %}
+            <p>{{ purgeAdvert.title }} nb d'applications : {{ purgeAdvert.nbapplications }}</p>
+        {% endfor %}
+    {% else %}
+        <p>Pas d'annonces à purger !</p>
+    {% endif %}
+
+{% endblock %}
