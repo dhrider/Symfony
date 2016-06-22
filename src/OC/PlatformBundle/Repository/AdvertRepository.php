@@ -11,18 +11,18 @@ class AdvertRepository extends EntityRepository
 {
   public function getAdvertsToPurge($days)
   {
-      $query = $this->createQueryBuilder('a');
-      $query->where('a.nbApplications = :nombre')
+      $query1 = $this->createQueryBuilder('a');
+      $query1->where('a.nbApplications = :nombre')
             ->setParameter('nombre', 0)
             ->andWhere('DATE_DIFF(a.updatedAt,a.date) > :days')
             ->setParameter('days',$days)
+            ->delete()
       ;
-      
-      $returnQuery = $query->getQuery()->getResult();
-      
-      $query->delete();
+
+      $returnQuery = $query1->getQuery()->getResult();
 
       return $returnQuery;
+    
   }
   
   public function getAdverts($page, $nbPerPage)

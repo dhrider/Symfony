@@ -22,20 +22,20 @@ class __TwigTemplate_14e4b7cf43c63c3b19b8721bcf947264ff450c013cb9d4e49dd1ad488d7
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c945d3ac9a2d7841164b5205fcf5c058743b4c89523f800017ab5f0c77c6d475 = $this->env->getExtension("native_profiler");
-        $__internal_c945d3ac9a2d7841164b5205fcf5c058743b4c89523f800017ab5f0c77c6d475->enter($__internal_c945d3ac9a2d7841164b5205fcf5c058743b4c89523f800017ab5f0c77c6d475_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "OCPlatformBundle:Advert:purger.html.twig"));
+        $__internal_ad308e0ab4582b3dbd0767b7f6867876d0b2f5bc32a90ecee8a111cbbcff1a20 = $this->env->getExtension("native_profiler");
+        $__internal_ad308e0ab4582b3dbd0767b7f6867876d0b2f5bc32a90ecee8a111cbbcff1a20->enter($__internal_ad308e0ab4582b3dbd0767b7f6867876d0b2f5bc32a90ecee8a111cbbcff1a20_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "OCPlatformBundle:Advert:purger.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_c945d3ac9a2d7841164b5205fcf5c058743b4c89523f800017ab5f0c77c6d475->leave($__internal_c945d3ac9a2d7841164b5205fcf5c058743b4c89523f800017ab5f0c77c6d475_prof);
+        $__internal_ad308e0ab4582b3dbd0767b7f6867876d0b2f5bc32a90ecee8a111cbbcff1a20->leave($__internal_ad308e0ab4582b3dbd0767b7f6867876d0b2f5bc32a90ecee8a111cbbcff1a20_prof);
 
     }
 
     // line 5
     public function block_title($context, array $blocks = array())
     {
-        $__internal_34abbe874658603debaa9c7aa969149a6ed5f5ce0a91d3d8edd473cec748c63f = $this->env->getExtension("native_profiler");
-        $__internal_34abbe874658603debaa9c7aa969149a6ed5f5ce0a91d3d8edd473cec748c63f->enter($__internal_34abbe874658603debaa9c7aa969149a6ed5f5ce0a91d3d8edd473cec748c63f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_ba58d8694f60dc4e210dc3bb4d5485d95c17af40838cd9da482e84923f6d3b4f = $this->env->getExtension("native_profiler");
+        $__internal_ba58d8694f60dc4e210dc3bb4d5485d95c17af40838cd9da482e84923f6d3b4f->enter($__internal_ba58d8694f60dc4e210dc3bb4d5485d95c17af40838cd9da482e84923f6d3b4f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         // line 6
         echo "    Purger les annonces - ";
@@ -43,47 +43,31 @@ class __TwigTemplate_14e4b7cf43c63c3b19b8721bcf947264ff450c013cb9d4e49dd1ad488d7
         echo "
 ";
         
-        $__internal_34abbe874658603debaa9c7aa969149a6ed5f5ce0a91d3d8edd473cec748c63f->leave($__internal_34abbe874658603debaa9c7aa969149a6ed5f5ce0a91d3d8edd473cec748c63f_prof);
+        $__internal_ba58d8694f60dc4e210dc3bb4d5485d95c17af40838cd9da482e84923f6d3b4f->leave($__internal_ba58d8694f60dc4e210dc3bb4d5485d95c17af40838cd9da482e84923f6d3b4f_prof);
 
     }
 
     // line 9
     public function block_ocplatform_body($context, array $blocks = array())
     {
-        $__internal_ddc0afe9fd3bd7a0609df9306c9ca3d536a8900b0d9803c938f6a5ab12706107 = $this->env->getExtension("native_profiler");
-        $__internal_ddc0afe9fd3bd7a0609df9306c9ca3d536a8900b0d9803c938f6a5ab12706107->enter($__internal_ddc0afe9fd3bd7a0609df9306c9ca3d536a8900b0d9803c938f6a5ab12706107_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "ocplatform_body"));
+        $__internal_787185c94d19f4f19f69228b8bad5c3059ee52b2308c50a899f785ec314e7e27 = $this->env->getExtension("native_profiler");
+        $__internal_787185c94d19f4f19f69228b8bad5c3059ee52b2308c50a899f785ec314e7e27->enter($__internal_787185c94d19f4f19f69228b8bad5c3059ee52b2308c50a899f785ec314e7e27_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "ocplatform_body"));
 
         // line 10
         echo "    ";
-        if ( !twig_test_empty((isset($context["purgeAdverts"]) ? $context["purgeAdverts"] : $this->getContext($context, "purgeAdverts")))) {
+        if (((isset($context["purgeAdverts"]) ? $context["purgeAdverts"] : $this->getContext($context, "purgeAdverts")) != 0)) {
             // line 11
-            echo "        ";
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["purgeAdverts"]) ? $context["purgeAdverts"] : $this->getContext($context, "purgeAdverts")));
-            foreach ($context['_seq'] as $context["_key"] => $context["purgeAdvert"]) {
-                // line 12
-                echo "            <p>";
-                echo twig_escape_filter($this->env, $this->getAttribute($context["purgeAdvert"], "title", array()), "html", null, true);
-                echo " nb d'applications : ";
-                echo twig_escape_filter($this->env, $this->getAttribute($context["purgeAdvert"], "nbapplications", array()), "html", null, true);
-                echo "</p>
-        ";
-            }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['purgeAdvert'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 14
-            echo "    ";
+            echo "        <p>";
+            echo twig_escape_filter($this->env, (isset($context["purgeAdverts"]) ? $context["purgeAdverts"] : $this->getContext($context, "purgeAdverts")), "html", null, true);
+            echo " annonce(s) supprimé(s)</p>
+    ";
         } else {
-            // line 15
+            // line 13
             echo "        <p>Pas d'annonces à purger !</p>
     ";
         }
-        // line 17
-        echo "
-";
         
-        $__internal_ddc0afe9fd3bd7a0609df9306c9ca3d536a8900b0d9803c938f6a5ab12706107->leave($__internal_ddc0afe9fd3bd7a0609df9306c9ca3d536a8900b0d9803c938f6a5ab12706107_prof);
+        $__internal_787185c94d19f4f19f69228b8bad5c3059ee52b2308c50a899f785ec314e7e27->leave($__internal_787185c94d19f4f19f69228b8bad5c3059ee52b2308c50a899f785ec314e7e27_prof);
 
     }
 
@@ -99,7 +83,7 @@ class __TwigTemplate_14e4b7cf43c63c3b19b8721bcf947264ff450c013cb9d4e49dd1ad488d7
 
     public function getDebugInfo()
     {
-        return array (  83 => 17,  79 => 15,  76 => 14,  65 => 12,  60 => 11,  57 => 10,  51 => 9,  41 => 6,  35 => 5,  11 => 3,);
+        return array (  66 => 13,  60 => 11,  57 => 10,  51 => 9,  41 => 6,  35 => 5,  11 => 3,);
     }
 }
 /* {# src/OC/PlatformBundle/Resources/views/Advert/edit.html.twig #}*/
@@ -111,13 +95,10 @@ class __TwigTemplate_14e4b7cf43c63c3b19b8721bcf947264ff450c013cb9d4e49dd1ad488d7
 /* {% endblock %}*/
 /* */
 /* {% block ocplatform_body %}*/
-/*     {% if purgeAdverts is not empty %}*/
-/*         {% for purgeAdvert in purgeAdverts %}*/
-/*             <p>{{ purgeAdvert.title }} nb d'applications : {{ purgeAdvert.nbapplications }}</p>*/
-/*         {% endfor %}*/
+/*     {% if purgeAdverts != 0 %}*/
+/*         <p>{{ purgeAdverts }} annonce(s) supprimé(s)</p>*/
 /*     {% else %}*/
 /*         <p>Pas d'annonces à purger !</p>*/
 /*     {% endif %}*/
-/* */
 /* {% endblock %}*/
 /* */

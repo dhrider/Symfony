@@ -7,12 +7,9 @@
 {% endblock %}
 
 {% block ocplatform_body %}
-    {% if purgeAdverts is not empty %}
-        {% for purgeAdvert in purgeAdverts %}
-            <p>{{ purgeAdvert.title }} nb d'applications : {{ purgeAdvert.nbapplications }}</p>
-        {% endfor %}
+    {% if purgeAdverts != 0 %}
+        <p>{{ purgeAdverts }} annonce(s) supprimé(s)</p>
     {% else %}
         <p>Pas d'annonces à purger !</p>
     {% endif %}
-
 {% endblock %}

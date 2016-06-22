@@ -10,10 +10,8 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class AdvertController extends Controller
 {
-  public function purgerAction(Request $request)
+  public function purgerAction($days)
   {
-    $days = $request->query->get('days',10);
-
     $purgeAdverts = $this->get('oc_platform.purger.advert')->purgerAdvert($days);
     
     if (null === $purgeAdverts) {
@@ -24,6 +22,7 @@ class AdvertController extends Controller
         'purgeAdverts' => $purgeAdverts
     ));
   }
+  
   public function indexAction($page)
   {
     if ($page < 1) {

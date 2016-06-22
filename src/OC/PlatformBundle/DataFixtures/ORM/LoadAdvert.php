@@ -17,13 +17,13 @@ class LoadAdvert implements FixtureInterface
                 "author" => "Web Desing Inc",
                 "content" => "On a besoin d'un désigner Web",
                 "nb_applications" => 0,
-                "updated_at" => date_add(new \DateTime(),new \DateInterval('P15D'))
+                "updated_at" => date_add(new \DateTime(),new \DateInterval('P4D'))
             ),
             array(
                 "title" => "Cherche Chef de projet multimédia",
                 "author" => "OpenClassrooms",
                 "content" => "On a besoin d'chef de projet",
-                "nb_applications" => 1,
+                "nb_applications" => 0,
                 "updated_at" => date_add(new \DateTime(),new \DateInterval('P5D'))
             ),
             array(
@@ -44,8 +44,8 @@ class LoadAdvert implements FixtureInterface
                 "title" => "Cherche développeur/analyste",
                 "author" => "OpenClassrooms",
                 "content" => "On a besoin d'un développeur/analyste",
-                "nb_applications" => 1,
-                "updated_at" => date_add(new \DateTime(),new \DateInterval('P1D'))
+                "nb_applications" => 0,
+                "updated_at" => date_add(new \DateTime(),new \DateInterval('P11D'))
             )
         );
 
