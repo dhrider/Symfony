@@ -12,12 +12,15 @@ class AdvertController extends Controller
 {
   public function purgerAction($days)
   {
+    // on lance le service purgerAdvert et on récupère le résultat
     $purgeAdverts = $this->get('oc_platform.purger.advert')->purgerAdvert($days);
     
+    // En cas d'erreur
     if (null === $purgeAdverts) {
-      throw new NotFoundHttpException("Il n'y a pas d'annonce à purger.");
+      throw new NotFoundHttpException("Erreur dans la récupération du service.");
     }
 
+    // On retourne le résultat dans la vue
     return $this->render('OCPlatformBundle:Advert:purger.html.twig', array(
         'purgeAdverts' => $purgeAdverts
     ));

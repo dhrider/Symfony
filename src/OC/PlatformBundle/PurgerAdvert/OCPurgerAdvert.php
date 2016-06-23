@@ -16,6 +16,7 @@ class OCPurgerAdvert
 
     public function purgerAdvert($days)
     {
+        // on récupère le résultat de la fonction dans le repository
         $results = $this->em->getRepository('OCPlatformBundle:Advert')
                             ->getAdvertsToPurge($days)
         ;
