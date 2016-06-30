@@ -386,14 +386,10 @@ class __TwigTemplate_0b47c49b59ea737650a10d7408d70d9d6aa3f87bf6ce0f4194c5da63073
         ";
             } else {
                 // line 153
-                echo "            <table class=\"alt queries-table\">
-                <thead>
-                <tr>
-                    <th class=\"nowrap\" onclick=\"javascript:sortTable(this, 0, 'queries-";
+                echo 'queries-;";
                 // line 156
                 echo twig_escape_filter($this->env, $this->getAttribute($context["loop"], "index", array()), "html", null, true);
-                echo "')\" data-sort-direction=\"-1\" style=\"cursor: pointer;\">#<span class=\"text-muted\">&#9650;</span></th>
-                    <th class=\"nowrap\" onclick=\"javascript:sortTable(this, 1, 'queries-";
+                echo "javascript:sortTable(this, 1, 'queries-;";
                 // line 157
                 echo twig_escape_filter($this->env, $this->getAttribute($context["loop"], "index", array()), "html", null, true);
                 echo "')\" style=\"cursor: pointer;\">Time<span></span></th>
