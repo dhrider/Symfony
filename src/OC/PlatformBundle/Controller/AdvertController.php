@@ -75,6 +75,7 @@ class AdvertController extends Controller
     if (null === $advert) {
       throw new NotFoundHttpException("L'annonce d'id ".$id." n'existe pas.");
     }
+      
 
     // Récupération de la liste des candidatures de l'annonce
     $listApplications = $em
@@ -201,5 +202,10 @@ class AdvertController extends Controller
     ));
   }
 
-  
+  public function translationAction($name)
+  {
+      return $this->render('OCPlatformBundle:Advert:translation.html.twig',array(
+          'name' => $name
+      ));
+  }
 }
