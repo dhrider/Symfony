@@ -52,6 +52,11 @@ class Advert
   private $published = true;
 
   /**
+   * @ORM\Column(name="user", type="string", length=255, unique=false)
+   */
+  private $user;
+
+  /**
    * @ORM\ManyToMany(targetEntity="OC\PlatformBundle\Entity\Category", cascade={"persist"})
    * @ORM\JoinTable(name="oc_advert_category")
    */
@@ -199,6 +204,16 @@ class Advert
   public function getImage()
   {
     return $this->image;
+  }
+
+  public function getUser()
+  {
+    return $this->user;
+  }
+
+  public function setUser($user)
+  {
+    $this->user = $user;
   }
 
   /**
