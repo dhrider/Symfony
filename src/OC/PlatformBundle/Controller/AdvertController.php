@@ -11,9 +11,19 @@ use OC\PlatformBundle\Event\MessagePostEvent;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\File\Exception\AccessDeniedException;
 use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+use Symfony\Component\HttpFoundation\Response;
 
 class AdvertController extends Controller
 {
+    /**
+     * @ParamConverter("json")
+     */
+    public function ParamConverterAction($json)
+    {
+        return new Response(print_r($json, true));
+    }
+
   public function purgerAction($days)
   {
     // on lance le service purgerAdvert et on récupère le résultat
@@ -75,7 +85,7 @@ class AdvertController extends Controller
     if (null === $advert) {
       throw new NotFoundHttpException("L'annonce d'id ".$id." n'existe pas.");
     }
-      
+
 
     // Récupération de la liste des candidatures de l'annonce
     $listApplications = $em

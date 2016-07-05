@@ -335,6 +335,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'oc_platform_translation')), array (  '_controller' => 'OC\\PlatformBundle\\Controller\\AdvertController::translationAction',));
         }
 
+        // oc_platform_paramconverter
+        if (0 === strpos($pathinfo, '/test') && preg_match('#^/test/(?P<json>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'oc_platform_paramconverter')), array (  '_controller' => 'OC\\PlatformBundle\\Controller\\AdvertController::ParamConverterAction',));
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }
